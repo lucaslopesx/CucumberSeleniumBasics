@@ -1,9 +1,11 @@
-Feature: feature to test login
+Feature: Search words in google
+  Scenario Outline:
+    Given is on google search
+    When enters the "<word>" in search
+    Then the word is searched
 
-  Scenario: Check login is successfull with valid credentials
-
-    Given user is on google search
-    When user enters the word web driver in search
-    And clicks on enter
-    Then user is navigated to the web driver search page
-    
+    Examples:
+    | word |
+    | twitter |
+    | facebook |
+    | cyan agro |
