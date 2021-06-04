@@ -13,6 +13,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import javax.swing.*;
 import java.util.concurrent.TimeUnit;
 
 public class SearchSteps {
@@ -35,5 +36,6 @@ public class SearchSteps {
     public void the_word_is_searched() {
         WebElement element = driver.findElement(By.name("q"));
         element.submit();
+        JOptionPane.showMessageDialog(null, word );
     }
 }
